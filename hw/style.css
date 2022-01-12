@@ -37,6 +37,7 @@ h1 { font-family: 'Roboto', serif;
 .searchInput {
 	border-radius: 4px;
 	line-height: 24px;
+	padding-left: 30px;
 }
 /* body  */
 .body {
