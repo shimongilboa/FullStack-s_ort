@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akebono&display=swap');
+body { font-family: 'Roboto', sans-serif; }
+div { box-sizing: border-box; }
+h1 { font-family: 'Yuji Hentaigana Akebono', cursive; }
+
+.center, .left, .right, .searchInput, .card, .footer { border: 1px solid rgba(0, 0, 0, .8); }
+.body, .nav, .centerBody, .footer { display:  flex; flex-wrap: wrap; }
+
+/*  Header  */
+.header { padding-bottom: 80px; }
+.nav {
+	background-color: #6d0101;
+	line-height: 80px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.3);
+	padding: 0 20px;
+}
+
+.navLink {flex: 5%;}
+.navSpace {flex: 75%;}
+.navSearch {flex: 10%;}
+.link { 
+	color: white;
+    text-decoration: none;
+    font-size: 1.3rem; 
+}
+.searchInput {
+	border-radius: 4px;
+	line-height: 24px;
+}
+/* body  */
+.body {
+	gap: 2%;
+	padding:  0 40px 40px;
+}
+.left, .right { flex: 18%; }
+.center { 
+	flex: 60%; 
+	background-image: url(https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/ccdb3a19-7024-4aa5-8412-d8b74a189760/Introduction-to-science-fiction-The-best-sci-fi-books-for-newbies-to-the-genre-Header.jpg);
+	background-position: center center;	
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.center, .left, .right { border-radius: 10px; }
+
+/*  center header  */
+.centerHead {
+	padding: 20px 0 80px;
+    text-align: center;
+}
+/*  center body  */ 
+.centerBody { 
+	gap: 5%;
+    padding: 0 150px;
+}
+
+/*  Card  */
+.card {
+	flex: 15%;
+	padding: 20px;
+	border-radius: 6px;
+	background-color: white;
+}
+.cardBody {
+	text-align: center;
+}
+
+.circle {
+	border-radius: 100%;
+	width: 80px;
+	height: 80px;
+	background-image: url(https://key0.cc/images/preview/65088_9c16573edcfbfb557ddc277ad72b165c.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin: 0 auto;
+	border: none;
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
+    
+}
+.circle:hover {
+	cursor: pointer;
+	box-sizing: border-box;
+	box-shadow: none;
+
+}
+.cardHead {
+	padding-bottom: 60px;
+	text-align: center;
+}
+
+/* center footer */
+.centerFooter { padding: 100px 150px 40px; }
+.footer {
+	padding: 0 40px;
+	background-color: white;
+	border-radius: 6px;
+}
+.textColumn {
+	flex: 15%;
+	padding: 20px;
+	overflow-wrap: anywhere;
+}
+
+.search { position: relative; }
+.search::before {
+	content: "";
+	background-image: url(https://p.kindpng.com/picc/s/25-254121_search-prism-learning-solutions-search-icon-svg-free.png);
+	background-position: center center;	
+	background-size: contain;
+	background-repeat: no-repeat;
+	height:  100%;
+	width:  20px;
+	position: absolute;
+	left: 5px;
+    top: 2px;
+}
+
+.nav1200 { display: none; }
+.hide { display: none !important; }
+
+
+/* up to 1200px screen width */ 
+
+@media only screen and (max-width: 1200px) {
+	.nav1200 { 
+		display: block;
+		position: relative;
+	    height: 100px;
+	    background-color: #6d0101;
+	    padding-top: 20px;
+	    padding-left: 20px; 
+	    line-height: 60px;
+	}
+	.nav { display: none; }
+	.btnimg { width: 60px; height: 60px; }
+	.dropMenu { 
+		position: relative;
+	    border: 1px solid #6d0101;
+	    background-color: white;
+	    display: flex;
+	    flex-direction: column;
+	    z-index: 2;
+	    width: 25%;
+	    gap: 20px;
+	    padding: 20px;
+	    top: 20px;
+	}
+	.link { color: #6d0101 }
+	.navSearch {
+		display: inline-block;
+	    position: absolute;
+	    right: 20px
+	}
+	.searchInput {
+		box-sizing: border-box;
+		border-radius: 4px;
+	    line-height: 60px;
+	    width: 300px;
+	    font-size: 1.8rem;
+	    padding-left: 50px;
+	}
+	.search::before {
+		width:  40px;
+		position: absolute;
+		left: 5px;
+	    top: 2px;
+	}
+	.textColumn{
+		/* flex: auto; */
+		flex: 50%;
+	}
+}
