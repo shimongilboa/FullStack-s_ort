@@ -72,6 +72,11 @@ h1 { font-family: 'Roboto', serif;
 	border-radius: 6px;
 	background-color: white;
 }
+.card:hover{
+	transform: scale(1.01,1.01);
+	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+	font-size:2rem;
+}
 .cardBody {
 	text-align: center;
 }
