@@ -2,18 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akebono&display=swap');
 body { font-family: 'Roboto', sans-serif; }
 div { box-sizing: border-box; }
-h1 { font-family: 'Roboto', serif;
+h1 { 
+	font-family: 'Roboto', serif;
 	color: white;
-	text-shadow: 1px 1px 2px black, 0 0 25px darkblue;
-	font-size:2.5rem;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    font-size: 2.5rem; 
 }
-.left{
-	background-image: linear-gradient(#413d3e,#404938);
-}
-.right{
-	background-image: linear-gradient(#977d44,#2f2e3c);
+.left {
+	background-image: linear-gradient(#413d3e, #404938);
+	font-size: 2rem;
+	color: white;
+	writing-mode: vertical-lr;
 }
 
+.right {
+	background-image: linear-gradient(#977d44, #2f2e3c);
+}
 .center, .left, .right, .searchInput, .card, .footer { border: 1px solid rgba(0, 0, 0, .8); }
 .body, .nav, .centerBody, .footer { display:  flex; flex-wrap: wrap; }
 
@@ -37,7 +41,6 @@ h1 { font-family: 'Roboto', serif;
 .searchInput {
 	border-radius: 4px;
 	line-height: 24px;
-	padding-left: 30px;
 }
 /* body  */
 .body {
@@ -45,7 +48,6 @@ h1 { font-family: 'Roboto', serif;
 	padding:  0 40px 40px;
 }
 .left, .right { flex: 18%; }
-
 .center { 
 	flex: 60%; 
 	background-image: url(https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/ccdb3a19-7024-4aa5-8412-d8b74a189760/Introduction-to-science-fiction-The-best-sci-fi-books-for-newbies-to-the-genre-Header.jpg);
@@ -72,12 +74,32 @@ h1 { font-family: 'Roboto', serif;
 	padding: 20px;
 	border-radius: 6px;
 	background-color: white;
+	transition-property: all;
+  	transition-duration: .1s;
+  	transition-timing-function: linear;
 }
-.card:hover{
-	transform: scale(1.01,1.01);
-	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
-	font-size:2rem;
+.card:hover {
+	transform: scale(1.05,1.1);
+	box-shadow: 2px 2px 10px rgba(0,0,0,.6);
 }
+.card span {
+	display:  block;
+	transition-property: all;
+  	transition-duration: .4s;
+  	transition-timing-function: linear;
+}
+.card:hover span {
+	color:  white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	transform: scale(2,2);
+}
+
+.card:hover .circle {
+	display:  block;
+	transform: scale(1.2,1.2);
+	box-shadow: 1px 1px 8px rgb(0 0 0 / 60%);
+}
+
 .cardBody {
 	text-align: center;
 }
@@ -93,17 +115,28 @@ h1 { font-family: 'Roboto', serif;
 	margin: 0 auto;
 	border: none;
     box-shadow: 1px 1px 4px rgb(0 0 0 / 40%);
-    
+    transition-property: all;
+  	transition-duration: .4s;
+  	transition-timing-function: linear;
 }
 .circle:hover {
 	cursor: pointer;
 	box-sizing: border-box;
 	box-shadow: none;
-
 }
 .cardHead {
-	padding-bottom: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	text-align: center;
+}
+
+.cardName{
+    text-align: center;
+}
+
+.cardBody ul {
+    list-style: none;
+    padding-inline-start: 0;
 }
 
 /* center footer */
@@ -122,7 +155,7 @@ h1 { font-family: 'Roboto', serif;
 .search { position: relative; }
 .search::before {
 	content: "";
-	background-image: url(https://p.kindpng.com/picc/s/25-254121_search-prism-learning-solutions-search-icon-svg-free.png);
+	/* background-image: url(https://p.kindpng.com/picc/s/25-254121_search-prism-learning-solutions-search-icon-svg-free.png); */
 	background-position: center center;	
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -182,11 +215,5 @@ h1 { font-family: 'Roboto', serif;
 		position: absolute;
 		left: 5px;
 	    top: 2px;
-	}
-
-	.left, .right{display: none;};
-	.textColumn{
-		/* flex: auto; */
-		flex: 50%;
 	}
 }
