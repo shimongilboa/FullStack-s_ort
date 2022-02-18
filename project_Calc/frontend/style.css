@@ -1,0 +1,16 @@
+*{box-sizing: border-box; font-family: sans-serif;}
+
+.container{width: 500px; margin: 0 auto; position:absolute; left: 1rem; right: 1rem; border-radius: 1%; background-color:rgba(0, 0, 255, 0.808); font-weight:bold; font-size: 1.5em; }
+
+.display{margin: 5px; position: relative;  background-color: white;
+    width:auto;
+    min-height: 50px;
+}
+
+.numbers{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+}
