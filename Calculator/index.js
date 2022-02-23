@@ -18,10 +18,10 @@ const clearAll = () => {
 
 const add = () => {
     const num = event.target.innerText;
+    op = true;
     if(num === '.' && display.innerText.includes(num)) return;
     display.innerText += num;
     // console.log(display.innerText);
-    op = true;
 }
 
 const set_op = () => {
