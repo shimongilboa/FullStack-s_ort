@@ -1,6 +1,7 @@
 let currentOperand = '';
 let previousOperand = '';
 let operator = '';
+let op = true;
 
 let display = document.querySelector(".dis");
 
@@ -20,16 +21,20 @@ const add = () => {
     if(num === '.' && display.innerText.includes(num)) return;
     display.innerText += num;
     // console.log(display.innerText);
+    op = true;
 }
 
 const set_op = () => {
     // DOTO: check case of negative numbers
-    if(operator === '')
+    if(op){
+        op = false;
+        if(operator === '')
         previousOperand = Number(display.innerText);
-    else
-        previousOperand = set_res(1);
-        operator = event.target.innerText;
-    display.innerText = `${operator} `;
+        else
+            previousOperand = set_res(1);
+            operator = event.target.innerText;
+        display.innerText = `${operator} `;
+    }
 }
 
 const set_res = (flag) => {
