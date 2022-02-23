@@ -63,5 +63,6 @@ const set_res = (flag) => {
         previousOperand = '';
         currentOperand =  '';
         operator = '';
+        op = true;
     }
 }
